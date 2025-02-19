@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AddEditCoffeeForm</class>
+ <widget class="QDialog" name="AddEditCoffeeForm">
+  <property name="geometry"><rect><x>0</x><y>0</y><width>400</width><height>400</height></rect></property>
+  <property name="windowTitle"><string>Добавить/Редактировать кофе</string></property>
+  <widget class="QWidget" name="formWidget">
+   <widget class="QLineEdit" name="nameEdit">
+    <property name="geometry"><rect><x>150</x><y>20</y><width>200</width><height>30</height></rect></property>
+    <property name="placeholderText"><string>Название сорта</string></property>
+   </widget>
+   <widget class="QLineEdit" name="roastEdit">
+    <property name="geometry"><rect><x>150</x><y>70</y><width>200</width><height>30</height></rect></property>
+    <property name="placeholderText"><string>Степень обжарки</string></property>
+   </widget>
+   <widget class="QLineEdit" name="typeEdit">
+    <property name="geometry"><rect><x>150</x><y>120</y><width>200</width><height>30</height></rect></property>
+    <property name="placeholderText"><string>Тип (Молотый/Зерна)</string></property>
+   </widget>
+   <widget class="QLineEdit" name="tasteEdit">
+    <property name="geometry"><rect><x>150</x><y>170</y><width>200</width><height>30</height></rect></property>
+    <property name="placeholderText"><string>Описание вкуса</string></property>
+   </widget>
+   <widget class="QLineEdit" name="priceEdit">
+    <property name="geometry"><rect><x>150</x><y>220</y><width>200</width><height>30</height></rect></property>
+    <property name="placeholderText"><string>Цена</string></property>
+   </widget>
+   <widget class="QLineEdit" name="volumeEdit">
+    <property name="geometry"><rect><x>150</x><y>270</y><width>200</width><height>30</height></rect></property>
+    <property name="placeholderText"><string>Объем (г)</string></property>
+   </widget>
+   <widget class="QPushButton" name="saveButton">
+    <property name="geometry"><rect><x>150</x><y>330</y><width>100</width><height>30</height></rect></property>
+    <property name="text"><string>Сохранить</string></property>
+   </widget>
+  </widget>
+ </widget>
+</ui>
