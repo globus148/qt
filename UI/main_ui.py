@@ -1,4 +1,4 @@
-# Form implementation generated from reading ui file 'UI/main.ui'
+# Form implementation generated from reading ui file 'main.ui'
 #
 # Created by: PyQt6 UI code generator 6.8.1
 #
@@ -12,26 +12,34 @@ from PyQt6 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(800, 500)
+        MainWindow.resize(800, 600)
         self.centralwidget = QtWidgets.QWidget(parent=MainWindow)
         self.centralwidget.setObjectName("centralwidget")
-        self.addButton = QtWidgets.QPushButton(parent=self.centralwidget)
-        self.addButton.setGeometry(QtCore.QRect(200, 10, 120, 30))
-        self.addButton.setObjectName("addButton")
-        self.editButton = QtWidgets.QPushButton(parent=self.centralwidget)
-        self.editButton.setGeometry(QtCore.QRect(400, 10, 120, 30))
-        self.editButton.setObjectName("editButton")
+        self.verticalLayout = QtWidgets.QVBoxLayout(self.centralwidget)
+        self.verticalLayout.setObjectName("verticalLayout")
         self.tableWidget = QtWidgets.QTableWidget(parent=self.centralwidget)
-        self.tableWidget.setGeometry(QtCore.QRect(20, 50, 760, 420))
+        self.tableWidget.setEditTriggers(QtWidgets.QAbstractItemView.EditTrigger.NoEditTriggers)
+        self.tableWidget.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectionBehavior.SelectRows)
         self.tableWidget.setObjectName("tableWidget")
         self.tableWidget.setColumnCount(0)
         self.tableWidget.setRowCount(0)
+        self.verticalLayout.addWidget(self.tableWidget)
+        self.horizontalLayout = QtWidgets.QHBoxLayout()
+        self.horizontalLayout.setObjectName("horizontalLayout")
+        self.addButton = QtWidgets.QPushButton(parent=self.centralwidget)
+        self.addButton.setObjectName("addButton")
+        self.horizontalLayout.addWidget(self.addButton)
+        self.editButton = QtWidgets.QPushButton(parent=self.centralwidget)
+        self.editButton.setObjectName("editButton")
+        self.horizontalLayout.addWidget(self.editButton)
+        self.verticalLayout.addLayout(self.horizontalLayout)
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "Информация о кофе"))
-        self.addButton.setText(_translate("MainWindow", "Добавить запись"))
-        self.editButton.setText(_translate("MainWindow", "Редактировать запись"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Кофе"))
+        self.addButton.setText(_translate("MainWindow", "Добавить"))
+        self.editButton.setText(_translate("MainWindow", "Редактировать"))
